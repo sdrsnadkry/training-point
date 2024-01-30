@@ -4,4 +4,4 @@ const second = Number("400");
 
 const sum = String(first) + Number(second);
 
-console.log(sum);
+// console.log(sum);
