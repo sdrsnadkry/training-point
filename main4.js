@@ -14,4 +14,4 @@ const addToNumbersHere = (a, b) => {
 }
 
 
-console.log(addToNumbersHere(10, 15));
+// console.log(addToNumbersHere(10, 15));
