@@ -1,17 +1,33 @@
-//const
-const aaaa = 5;
+// // const header = document.getElementsByTagName('h1')
+// // const header = (document.getElementById("headers").style.color = "blue");
 
-//let
+// // console.log(header);
 
-let b = "6";
+// const a = 5;
 
-b = "adsad";
+let color = "blue";
 
-//var
+const button = document
+    .getElementById("color-button")
 
-var c = 7;
+.addEventListener("click", () => {
+    if (color === "blue") {
+        color = "red";
+        document.getElementById("headers").style.color = color;
+    } else if (color === "red") {
+        color = "blue";
+        document.getElementById("headers").style.color = color;
+    }
+});
 
-var c = 9;
+// console.log(button);
 
-
-// console.log(c)
+const onButtonCLick = () => {
+    if (color === "blue") {
+        color = "red";
+        document.getElementById("headers").style.color = color;
+    } else if (color === "red") {
+        color = "blue";
+        document.getElementById("headers").style.color = color;
+    }
+};
