@@ -7,18 +7,18 @@
     <title>My TItle</title>
 </head>
 
-<style>
-    .headers {
-        color: red;
-    }
-</style>
-
 <body>
-    <h1 class="headers" id="headers" onclick="">My Header 2</h1>
-    <h1 class="headers">My Header</h1>
+    <form method="post" name="login-form" onsubmit="return submitForm(event)">
 
+        <input type="text" name="brand" id="brand" placeholder="Enter your brand">
 
-    <button id="color-button" onclick="onButtonCLick()">Click to change color</button>
+        <input type="text" name="model" id="model" placeholder="Enter car's model">
+        <input type="text" name="color" id="color" placeholder="Enter car's color">
+
+        <button type="submit">Send</button>
+    </form>
+
+    <h3 id="car-detail"></h3>
 </body>
 
 <script src="main.js"></script>

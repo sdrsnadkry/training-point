@@ -1,33 +1,23 @@
-// // const header = document.getElementsByTagName('h1')
-// // const header = (document.getElementById("headers").style.color = "blue");
+function submitForm(event) {
+    event.preventDefault();
 
-// // console.log(header);
+    const form = document.forms["login-form"];
 
-// const a = 5;
+    const brand = form.brand.value;
+    const model = form.model.value;
+    const color = form.color.value;
 
-let color = "blue";
+    const car = {
+        brand: brand,
+        model: model,
+        color: color,
+    };
 
-const button = document
-    .getElementById("color-button")
+    const strigify = JSON.stringify(car);
 
-.addEventListener("click", () => {
-    if (color === "blue") {
-        color = "red";
-        document.getElementById("headers").style.color = color;
-    } else if (color === "red") {
-        color = "blue";
-        document.getElementById("headers").style.color = color;
-    }
-});
+    localStorage.setItem("car", strigify);
 
-// console.log(button);
+    const carDetails = `This is ${brand} ${model} ${color} car`;
 
-const onButtonCLick = () => {
-    if (color === "blue") {
-        color = "red";
-        document.getElementById("headers").style.color = color;
-    } else if (color === "red") {
-        color = "blue";
-        document.getElementById("headers").style.color = color;
-    }
-};
+    document.getElementById("car-detail").innerHTML = carDetails;
+}
