@@ -1,5 +1,5 @@
 function submitForm(event) {
-    event.preventDefault();
+    // event.preventDefault();
 
     const form = document.forms["login-form"];
 
@@ -17,7 +17,9 @@ function submitForm(event) {
 
     localStorage.setItem("car", strigify);
 
-    const carDetails = `This is ${brand} ${model} ${color} car`;
+    const carDetails =
+        `This is ${brand} ${model} ${color} car`;
 
-    document.getElementById("car-detail").innerHTML = carDetails;
+    document.getElementById("car-detail")
+        .innerHTML = carDetails;
 }
