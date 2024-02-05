@@ -26,6 +26,14 @@ function submitForm(event) {
     olList.appendChild(newLi);
 }
 
+function clickButtonToRemove() {
+    const olList = document.getElementById("list");
+    const lastElement = olList.lastElementChild;
+
+    olList.removeChild(lastElement);
+
+}
+
 function clickToStrike() {
     const olList = document.getElementById("list");
     const lastElement = olList.lastElementChild;
