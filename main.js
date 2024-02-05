@@ -1,25 +1,34 @@
 function submitForm(event) {
-    // event.preventDefault();
+    event.preventDefault();
 
-    const form = document.forms["login-form"];
+    //get values from forms
+    const form = document.forms["todo"];
+    const task = form["task"].value;
 
-    const brand = form.brand.value;
-    const model = form.model.value;
-    const color = form.color.value;
+    const olList = document.getElementById("list");
 
-    const car = {
-        brand: brand,
-        model: model,
-        color: color,
-    };
 
-    const strigify = JSON.stringify(car);
+    //take last element of olList
+    const lastElementValue = olList.lastElementChild.attributes['id']['value'];
 
-    localStorage.setItem("car", strigify);
+    console.log(lastElementValue)
 
-    const carDetails =
-        `This is ${brand} ${model} ${color} car`;
+    //create new li element <li>task</li>
+    const newLi = document.createElement("li");
+    newLi.innerHTML = task;
+    newLi.setAttribute("id", Number(lastElementValue) + 1);
 
-    document.getElementById("car-detail")
-        .innerHTML = carDetails;
+    /**
+     * <ol>
+     *  <li>task</li>
+     * </ol>
+     */
+    olList.appendChild(newLi);
+}
+
+function clickToStrike() {
+    const olList = document.getElementById("list");
+    const lastElement = olList.lastElementChild;
+
+    lastElement.style.textDecoration = "line-through";
 }
