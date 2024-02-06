@@ -1,12 +1,16 @@
-function callbackFunction(sum) {
-    console.log("This function return sum of 2 number", sum);
+function getValuesFromServer() {
+    //gserver values
+
+    const sum = 2 + 2;
+
+    // alert("Hello there! ");
+
+    console.log('Sum is: ', Math.random());
+
 }
 
-function parentFunction(num1, numb2, callback) {
-    const sumOfNumbers = num1 + numb2;
-    callback(sumOfNumbers);
-}
 
-function childFunction() {
-    parentFunction(4, 4, callbackFunction);
-}
+// setTimeout(getValuesFromServer, 3000)
+
+
+setInterval(getValuesFromServer, 1000)
