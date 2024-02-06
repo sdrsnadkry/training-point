@@ -1,16 +1,29 @@
-function getValuesFromServer() {
-    //gserver values
+// function getValuesFromServer() {
+//     //Promises
+// }
 
-    const sum = 2 + 2;
+// const delayedTask = new Promise((resolve, reject) => {
 
-    // alert("Hello there! ");
+//     // setTimeout(() => {
+//     //     resolve("Task is done!")
+//     // }, 3000)
+// })
 
-    console.log('Sum is: ', Math.random());
+// delayedTask.then((value) => {
+//     console.log(value)
+// })
 
-}
+fetch("https://jsonplaceholder.typicode.com/todos")
+    .then((response) => response.json())
+    .then((json) => {
+        const array = [];
+        //value store json data
+
+        // create html ul li <ul>
 
 
-// setTimeout(getValuesFromServer, 3000)
+        array.forEach((value) => {
+            //append child to ul <li></li>
+        });
 
-
-setInterval(getValuesFromServer, 1000)
+    });
